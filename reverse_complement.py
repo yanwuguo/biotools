@@ -12,6 +12,10 @@ def RevCom(seq):
     return (upperseq,rev_com)
 
 
-
-    
+def GCcontent(seq):
+    seq_dict = dict()
+    for base in seq:
+        seq_dict[base] = seq_dict.get(base,0) + 1
+    GCcontent = (seq_dict["G"] + seq_dict["C"])/(seq_dict["G"] + seq_dict["C"] + seq_dict["A"] + seq_dict["T"])
+    return GCcontent
     
